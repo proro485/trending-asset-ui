@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: content-box;
+  --bg-color: #14172B;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.border-gradient {
+  border-radius: 1.5rem;
+  border: 1px solid transparent;
+  background: linear-gradient(to top, #2E314900, #ECF0FF1A) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.cutout::before {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  bottom: 18.1px;
+  height: 24px;
+  width: 28px;
+  border-radius: 0 180% 0 0;
+  border-top-width: 1.2px;
+  border-color: #ecf0ff25;
+  box-shadow: 1px -8px 0 0 var(--bg-color);
+}
+
+
+.cutout::after {
+  content: "";
+  position: absolute;
+  right: -2.13rem;
+  bottom: 18.1px;
+  height: 24px;
+  width: 30px;
+  border-radius: 180% 0 0 0;
+  border-top-width: 1.2px;
+  border-color: #ecf0ff25;
+  box-shadow: 0px -10px 0 0 var(--bg-color);
+}
+
+.cutout-BTC {
+  background: linear-gradient(180deg, rgba(98, 106, 136, 0.1) 0%, rgba(234, 179, 0, 0.06) 100%);
+  backdrop-filter: blur(100px);
+}
+
+.cutout-SOL {
+  background: linear-gradient(180deg, rgba(98, 106, 136, 0.1) 0%, rgba(220, 31, 255, 0.1) 100%);
+  backdrop-filter: blur(100px);
+}
+
+.cutout-ETH {
+  background: linear-gradient(180deg, rgba(98, 106, 136, 0.1) 0%, rgba(237, 240, 244, 0.1) 100%);
+  backdrop-filter: blur(100px);
+}
+
+.cutout-BUSD {
+  background: linear-gradient(180deg, rgba(98, 106, 136, 0.1) 0%, rgba(234, 179, 0, 0.06) 100%);
+  backdrop-filter: blur(100px);
+}
+
+.cutout-SHIB {
+  background: linear-gradient(180deg, rgba(98, 106, 136, 0.1) 0%, rgba(228, 45, 4, 0.1) 100%);
+  backdrop-filter: blur(100px);
+}
